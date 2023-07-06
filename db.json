@@ -1,0 +1,36 @@
+{
+  "ingreds": [
+    {
+      "ingName": "toffee",
+      "ingAmt": 34,
+      "freshness": "used",
+      "expiryDate": "2023-06-29T18:30:00.000Z",
+      "ingredType": "exotics",
+      "id": 1
+    },
+    {
+      "ingName": "coffee",
+      "ingAmt": 35,
+      "freshness": "used",
+      "expiryDate": "2023-07-06T18:30:00.000Z",
+      "ingredType": "exotics",
+      "id": 2
+    },
+    {
+      "ingName": "coconut",
+      "ingAmt": 69,
+      "freshness": "used",
+      "expiryDate": "2023-06-06T18:30:00.000Z",
+      "ingredType": "fruits",
+      "id": 3
+    },
+    {
+      "ingName": "coconut",
+      "ingAmt": 554,
+      "freshness": "used",
+      "expiryDate": "2023-06-06T18:30:00.000Z",
+      "ingredType": "fruits",
+      "id": 3
+    }
+  ]
+}

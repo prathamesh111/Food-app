@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <img src="{{ selectedRecipeItem.imagePath }}" alt="" class="img-fluid" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ selectedRecipeItem.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <select (click)="onModifyrecipe()" [(ngModel)]="selectedModification">
+      <option *ngFor="let option of options">{{ option }}</option>
+    </select>
+
+    <!-- <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select (click)="onModifyrecipe()" [(value)]="selectedModification">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field> -->
+
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    Description : {{ selectedRecipeItem.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let ingred of selectedIngreds">{{ ingred.ingName }}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.buy-now{
+    background: #ff9f00 !important;
+    color: #fff !important;
+}
+.add-cart{
+    background: #fb641b !important;
+    color: #fff !important;
+
+}
+
+.detail-card{
+    .title{
+        color: #212121;
+        font-size: 18px;
+        font-weight: 400;
+        display: contents;
+    }
+    .description{
+        font-size: 14px;
+        line-height: 21px;
+        color: #212121;
+    }
+    .price{
+        font-size: 28px;
+        vertical-align: sub;
+    }
+    .favorite_button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        .icon{
+            color: #ccc;
+        }
+    }
+}

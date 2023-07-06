@@ -1,0 +1,29 @@
+<div class="row" style="width: 400px; margin: 0 auto;">
+  <div class="col-md-12">
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="uemail" />
+            </mat-form-field>
+          </div>
+        
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="upass" type="password" />
+              </mat-form-field>
+            </div>
+          </div>
+      </div>
+      <button [disabled]="!authForm.valid" type="submit" mat-raised-button color="primary" >{{isLoginMode ? 'Sign In' : 'Sign Up'}}</button> |
+      <button type="button" mat-raised-button color="blue" (click) ="onSwitch()">Switch to login</button>
+      <button mat-raised-button color="warn">clear</button>
+    </form>
+  </div>
+</div>
+<app-dialog *ngIf="error  !=  '' "></app-dialog>

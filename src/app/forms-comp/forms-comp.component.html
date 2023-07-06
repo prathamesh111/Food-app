@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" #coderDetails="ngForm">
+    <div class="form-group">
+        <input type="text" ngModel email required name="emailadd" class="form-control">
+    </div>
+    <div class="form-group">
+       <select name="level" ngModel [ngModel]="defaultLevel" >
+        <option *ngFor="let level of levels">{{level}}</option>
+       </select>
+    </div>
+    <div class="form-group">
+        <input type="password" ngModel  required name="password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">submit</button>
+    <div *ngIf="!coderDetails.valid && coderDetails.touched">form is invalid</div>
+    <ul *ngIf="!coderDetails.valid && coderDetails.touched">
+        <li>{{userData.email}}</li>
+        <li>{{userData.password}}</li>
+        <li>{{userData.level}}</li>
+    </ul>
+</form>
+

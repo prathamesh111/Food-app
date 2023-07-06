@@ -1,0 +1,18 @@
+.v-center{
+    display: inline-block;
+    vertical-align: middle;
+}
+.card-body{
+    width: calc(100% - 155px);
+}
+.card-img-top{
+    width: 150px;
+    height: 100px;
+}
+.card{
+    flex-direction: row !important;
+}
+
+.activeRec{
+    background-color: #ccc;
+}

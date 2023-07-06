@@ -1,0 +1,61 @@
+.product-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    .img-container {
+        flex-basis: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .prod-meta {
+        width: calc(100% - 200px);
+
+        .prod-title {
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .prod-title {
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .prod-desc {
+            margin-top: 5px;
+            color: #212121;
+            line-height: 22px;
+            display: table;
+        }
+        .prod-price{
+            display: inline-block;
+            font-size: 25px;
+            font-weight: 500;
+            color: #212121;
+        }
+        .offer{
+            margin-top: 5px;
+        }
+    }
+
+}
+.cut-price{
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #878787;
+}
+
+.percent-off{
+    color: #388e3c;
+    font-size: 13px;
+    letter-spacing: -.2px;
+    font-weight: 500;
+}

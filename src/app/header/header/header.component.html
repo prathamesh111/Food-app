@@ -1,0 +1,41 @@
+
+
+<mat-toolbar color="primary">
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" routerLink="/">Recipe Book</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="isAuthenticated" class="nav-item ">
+          <a class="nav-link" routerLink="/recepies" routerLinkActive="active">Recipes</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/order" routerLinkActive="active">Order</a>
+        </li>
+      </ul>
+      <ul class="right-menu navbar-nav ml-auto">
+        <li class="nav-item " *ngIf="!isAuthenticated">
+          <a class="nav-link" routerLink="/auth" routerLinkActive="active">Auth</a>
+        </li>
+        <li class="nav-item " *ngIf="isAuthenticated">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <span class="example-spacer"></span>
+
+  <div class="side-menu"  *ngIf="isAuthenticated">
+    <mat-form-field>
+      <mat-label>Select Action</mat-label>
+      <mat-select  (selectionChange)="onSaveData(headerAction.value)"
+      #headerAction>
+        <mat-option *ngFor="let option of options" [value]="option.value">
+          {{option.viewValue}} <mat-icon>{{option.actionIcon}}</mat-icon>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-toolbar>

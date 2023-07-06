@@ -1,0 +1,8 @@
+.mat-mdc-dialog-actions {
+    justify-content: center !important;
+}
+
+::ng-deep .mat-mdc-dialog-container {
+    width: 500px !important;
+    min-height: 200px !important;
+}

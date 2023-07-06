@@ -1,0 +1,24 @@
+<section class="top-bar-order">
+    <ul class="zom-header-action d-flex flex-row justify-content-start">
+        <li class="link-item">
+            <a routerLink="delivery" routerLinkActive="active"  class="d-flex align-items-center"  >
+                <div class="img-container"><img class="img-fluid" src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png" alt=""></div> 
+                <div class="title">Delivery</div>
+            </a>
+        </li>
+        <li class="link-item">
+            <a routerLink="dinein" routerLinkActive="active"  class="d-flex align-items-center"  >
+                <div class="img-container"><img class="img-fluid" src="https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png" alt=""></div> 
+                <div class="title">Dine In</div>
+            </a>
+        </li>
+    </ul>
+    <ul class="d-flex flex-row justify-content-end">
+        <li class="link-item">
+            <button mat-icon-button>
+                <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+            </button>
+        </li>
+    </ul>
+</section>
+<router-outlet></router-outlet>

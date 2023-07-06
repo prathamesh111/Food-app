@@ -1,0 +1,63 @@
+
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Coffee" #input>
+</mat-form-field>
+<button (click)="onAddNewIngred()" mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+  <mat-icon>add</mat-icon>
+</button>
+
+<div class="mat-elevation-z8">
+  <table mat-table matSort [dataSource]="dataSource" >
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Ingredient Column -->
+    <ng-container matColumnDef="ingName">
+      <th mat-sort-header sortActionDescription="Sort by ingName" mat-header-cell *matHeaderCellDef>
+        Ingredient Name
+      </th>
+    <td mat-cell *matCellDef="let row">{{ row.ingName }}</td>
+    </ng-container>
+  
+    <!-- Amount Column -->
+    <ng-container matColumnDef="ingAmt">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let row">{{ row.ingAmt | currency }}</td>
+    </ng-container>
+  
+    <!-- Amount Column -->
+    <ng-container matColumnDef="ingredType">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef>Ingredient Type</th>
+      <td mat-cell *matCellDef="let row">{{ row.ingredType }}</td>
+    </ng-container>
+  
+    <!-- Amount Column -->
+    <ng-container matColumnDef="expiryDate">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef>expiryDate</th>
+      <td mat-cell *matCellDef="let row">{{ row.expiryDate | date }}</td>
+    </ng-container>
+  
+    <!-- Amount Column -->
+    <ng-container matColumnDef="freshness">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef>freshness</th>
+      <td mat-cell *matCellDef="let row">{{ row.freshness }}</td>
+    </ng-container>
+  
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let row ">
+        <button (click)="onEditIngredients(row)" mat-icon-button color="primary">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="onDeleteSlItem(row.id)" mat-icon-button color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>

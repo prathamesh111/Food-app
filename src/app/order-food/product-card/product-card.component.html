@@ -1,0 +1,24 @@
+<div class="product-main">
+    <div class="img-container">
+        <img class="img-fluid rounded" [src]="productItem.images" [alt]="productItem.title">
+    </div>
+    <div class="row prod-meta">
+        <div class="col-md-7">
+            <div class="prod-title">
+               <a [routerLink]="[pId, 'detail']">{{productItem.title}}</a>
+            </div>
+            <div class="prod-desc">
+                {{productItem.description}}
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="prod-price">
+                {{productItem.price | currency}}
+            </div>
+            <div class="offer">
+                <span class="cut-price">50</span> 
+                <span class="percent-off font-weight-bold"> 20% off</span>
+            </div>
+        </div>
+    </div>
+</div>

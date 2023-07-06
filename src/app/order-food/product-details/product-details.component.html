@@ -1,0 +1,21 @@
+<div class="detail-card mt-3">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="img-container position-relative mb-3">
+                <img class="img-fluid rounded" [src]="detailItem.images[0]" alt="{{detailItem.title}}">
+                <button class="favorite_button" mat-icon-button color="primary" aria-label="Example icon button with a heart icon">
+                    <mat-icon >favorite</mat-icon>
+                </button>
+            </div>
+            <button class="buy-now" mat-raised-button><mat-icon>add_shopping_cart</mat-icon>Buy Now</button>
+            <button (click)="addToCart(detailItem.id)" class="add-cart mx-2" mat-raised-button>
+                <mat-icon>bolt</mat-icon>Add to Cart
+            </button>
+        </div>
+        <div class="col-md-8">
+            <div class="title">{{detailItem.title}}</div>
+            <div class="description mt-3">{{detailItem.description}}</div>
+            <div class="price my-3">{{detailItem.price | currency}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<form [formGroup]="ingredientEditForm" (ngSubmit)="onSubmitIngredient()">
+  <h2 mat-dialog-title>Edit Ingredients</h2>
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Ingredient Name</mat-label>
+      <input
+        formControlName="ingName"
+        matInput
+        placeholder="Ingredient Name"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ingredient Amount</mat-label>
+      <input
+        formControlName="ingAmt"
+        type="number"
+        matInput
+        placeholder="Ingredient Amount"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Type of ingredient</mat-label>
+      <mat-select formControlName="ingredType">
+        <mat-option value="fruits">Fruits</mat-option>
+        <mat-option value="vegetables">Vegetables</mat-option>
+        <mat-option value="exotics">Exotics</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose expiry date</mat-label>
+      <input formControlName="expiryDate" matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <label>Freshness</label>
+    <mat-radio-group
+      formControlName="freshness"
+      class="example-radio-group"
+      appearance="outline"
+      aria-label="Freshness"
+    >
+      <mat-radio-button value="used">Can be used</mat-radio-button>
+      <mat-radio-button value="stale">Stale</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button type="submit" color="primary">{{actionStatus}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  </div>
+</form>

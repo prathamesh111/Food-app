@@ -1,0 +1,43 @@
+ul,li{
+    list-style-type: none;
+}
+ul{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+section{
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.img-container {
+    width: 40px;
+    margin-right: 5px;
+    background: grey;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.link-item{
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.zom-header-action .title{
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+}
+li .active .title{
+    color: rgb(239, 79, 95);
+}
+
+.top-bar-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
