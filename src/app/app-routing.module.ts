@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'shopping-list', loadChildren : ()=> import('./shopping-list/shopping.module').then(m => m.ShoppingModule)},
   {path: 'auth',  loadChildren: ()=> import('./auth/auth/auth.module').then(m => m.AuthModule)},
   {path: 'order', loadChildren: ()=> import('./order-food/order-food.module').then(m => m.OrderFood)},
-  {path: '*', pathMatch: 'full', component: PageNotFoundComponent},
+  {path: '**', pathMatch: 'full', component: PageNotFoundComponent},
 ];
 
 @NgModule({
