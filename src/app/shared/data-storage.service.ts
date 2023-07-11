@@ -34,7 +34,6 @@ export class DataStorageService {
         'https://zomato-6db38-default-rtdb.firebaseio.com/recepies.json',
         recepies
       ).subscribe()
-     
   }
 
   fetchData() { 

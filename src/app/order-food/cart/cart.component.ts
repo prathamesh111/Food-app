@@ -12,15 +12,13 @@ export class CartComponent implements OnInit{
   cart: productsModel[] =[];
   addedItem:any;
 
-  constructor(private route: ActivatedRoute  ){
+  constructor(private foodService: OrderFoodService  ){
   }
 
   ngOnInit(): void {
-    this.route.fragment.subscribe((res) => {
-      console.log(res);
-    })
-    this.route.queryParams.subscribe((res) => {
-      console.log(res);
+    this.foodService.fetchCart().subscribe(cart => {
+      this.cart = cart;
+      console.log(this.cart);
     })
     
   }

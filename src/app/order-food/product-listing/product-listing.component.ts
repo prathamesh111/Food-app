@@ -14,7 +14,7 @@ export class ProductListingComponent {
 
 
   ngOnInit(): void {
-    this.foodService.fetchProducts();
+    // this.foodService.fetchProducts();
     this.products = this.router.snapshot.data['prodMain'];
   }
 }
