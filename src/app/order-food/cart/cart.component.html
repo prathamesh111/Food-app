@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<h3>Your cart</h3>
+<div class="d-flex">
+    <div class=" grey-bg-space">
+        <div class="products-drawer grey-bg-space">
+            <app-product-card  *ngFor="let pItem of cart" [productItem] ="pItem" ></app-product-card>
+        </div>
+    </div>
+    <div class="price-section ">
+        <div class="price-inner grey-bg-space">
+            <div class="price-heading">price total</div>
+            <div class="cart-summary">
+                <div class="cart-summary-item">
+                    <div class="heading">Price ({{cartCount}} Items)</div>
+                    <div class="heading-detail">{{cartPriceSummary | currency}}</div>
+                </div>
+                <div class="cart-summary-item">
+                    <div class="heading">Discount</div>
+                    <div class="heading-detail">{{discount | currency}}</div>
+                </div>
+                <div class="cart-summary-item">
+                    <div class="heading">Delivery Charges</div>
+                    <div class="heading-detail">{{deliveryCharges | currency}}</div>
+                </div>
+                <div class="cart-summary-item">
+                    <div class="heading">Total charges</div>
+                    <div class="heading-detail">{{totalCharges | currency}}</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
