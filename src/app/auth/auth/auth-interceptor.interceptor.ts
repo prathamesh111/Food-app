@@ -21,7 +21,7 @@ export class AuthInterceptorInterceptor implements HttpInterceptor {
         if(!userData){
           return next.handle(request);
         }
-        const modifiedRequest = request.clone({ params: new HttpParams().set('auth', token), headers:request.headers.set('iaAuth', "Yes") });
+        const modifiedRequest = request.clone({ params: new HttpParams().set('auth', token), headers:request.headers.set('isAuth', "Yes") });
         return next.handle(modifiedRequest);
       }));
   }
