@@ -15,8 +15,8 @@
     </ul>
     <ul class="d-flex flex-row justify-content-end">
         <li class="link-item">
-            <button mat-icon-button>
-                <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+            <button mat-icon-button (click)="toCart()">
+                <mat-icon [matBadge]="cartCount" matBadgeColor="warn">shopping_cart</mat-icon>
             </button>
         </li>
     </ul>

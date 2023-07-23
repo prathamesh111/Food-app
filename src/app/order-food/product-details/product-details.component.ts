@@ -33,9 +33,11 @@ export class ProductDetailsComponent implements OnInit {
     }
 
 
-    addToCart(id: number){
-      // this.route.navigate(['cart'], {state : {product:this.detailItem}});
-      this.router.navigate(['cart'],{queryParams: {allowedit: 1}, fragment:'isloading'});
+    addToCart(){
+      this.foodService.addToCart(this.detailItem).subscribe(res => {
+        console.log(res);
+      })
+      this.router.navigate(['../../../cart'], {relativeTo: this.route});
     }
 
 }

@@ -1,14 +1,6 @@
 {
   "ingreds": [
     {
-      "ingName": "toffee",
-      "ingAmt": 34,
-      "freshness": "used",
-      "expiryDate": "2023-06-29T18:30:00.000Z",
-      "ingredType": "exotics",
-      "id": 1
-    },
-    {
       "ingName": "coffee",
       "ingAmt": 35,
       "freshness": "used",
@@ -31,6 +23,22 @@
       "expiryDate": "2023-06-06T18:30:00.000Z",
       "ingredType": "fruits",
       "id": 3
+    },
+    {
+      "ingName": "tobacco",
+      "ingAmt": 12,
+      "freshness": "used",
+      "expiryDate": "2023-07-19T18:30:00.000Z",
+      "ingredType": "vegetables",
+      "id": 4
+    },
+    {
+      "ingName": "demo",
+      "ingAmt": 45,
+      "freshness": "stale",
+      "expiryDate": "2023-07-14T18:30:00.000Z",
+      "ingredType": "vegetables",
+      "id": 5
     }
   ]
 }

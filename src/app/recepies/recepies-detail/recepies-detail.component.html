@@ -10,7 +10,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <select (click)="onModifyrecipe()" [(ngModel)]="selectedModification">
+    <select (change)="onModifyrecipe()" [(ngModel)]="selectedModification">
       <option *ngFor="let option of options">{{ option }}</option>
     </select>
 

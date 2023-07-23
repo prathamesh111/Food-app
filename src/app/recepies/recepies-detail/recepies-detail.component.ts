@@ -31,11 +31,14 @@ export class RecepiesDetailComponent implements OnInit {
   }
 
   onModifyrecipe(){
+    console.log("func cal")
     // this.selectedModification= modifyRecipe.value;
 
     switch(this.selectedModification){
       case 'Add to shop List':
           this.recipeService.addRecipeToShopList(this.selectedRecipeItem.ingredients);
+          this.selectedModification = "";
+          console.log("added to sl")
           break;
 
       case 'Edit recipe':

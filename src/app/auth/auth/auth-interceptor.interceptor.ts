@@ -2,11 +2,9 @@ import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
-  HttpEvent,
   HttpInterceptor,
   HttpParams
 } from '@angular/common/http';
-import { Observable,  } from 'rxjs';
 import {exhaustMap, take} from 'rxjs/operators'
 import { AuthService } from './auth.service';
 
@@ -23,9 +21,8 @@ export class AuthInterceptorInterceptor implements HttpInterceptor {
         if(!userData){
           return next.handle(request);
         }
-        const modifiedRequest = request.clone({ params: new HttpParams().set('auth', token), headers:request.headers.set('iaAuth', "Yes") });
+        const modifiedRequest = request.clone({ params: new HttpParams().set('auth', token), headers:request.headers.set('isAuth', "Yes") });
         return next.handle(modifiedRequest);
       }));
-    
   }
 }
