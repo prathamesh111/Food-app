@@ -3,7 +3,7 @@
         <img class="img-fluid rounded" [src]="productItem.images" [alt]="productItem.title">
     </div>
     <div class="row prod-meta">
-        <div class="col-md-7">
+        <div class="col-md-6">
             <div class="prod-title">
                <a [routerLink]="[pId, 'detail']">{{productItem.title}}</a>
             </div>
@@ -11,7 +11,7 @@
                 {{productItem.description}}
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="prod-price">
                 {{productItem.price | currency}}
             </div>
@@ -19,6 +19,9 @@
                 <span class="cut-price">50</span> 
                 <span class="percent-off font-weight-bold"> 20% off</span>
             </div>
+        </div>
+        <div class="col-md-2">
+            
         </div>
     </div>
 </div>
