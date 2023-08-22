@@ -9,7 +9,6 @@ import { MatModule } from './mat/mat.module';
 import { AddIngredientPopupComponent } from './components/add-ingredient-popup/add-ingredient-popup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     LoaderComponent,
@@ -24,7 +23,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     MatModule,
     ReactiveFormsModule
-
   ],
   exports: [
     LoaderComponent,

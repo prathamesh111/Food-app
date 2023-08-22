@@ -10,17 +10,16 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <select (click)="onModifyrecipe()" [(ngModel)]="selectedModification">
+    <!-- <select (click)="onModifyrecipe()" [(ngModel)]="selectedModification">
       <option *ngFor="let option of options">{{ option }}</option>
-    </select>
+    </select> -->
 
-    <!-- <mat-form-field>
+    <mat-form-field>
         <mat-label>Select an option</mat-label>
-        <mat-select (click)="onModifyrecipe()" [(value)]="selectedModification">
-            <mat-option>None</mat-option>
+        <mat-select (selectionChange)="onModifyrecipe($event)" [(value)]="selectedModification">
             <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
         </mat-select>
-    </mat-form-field> -->
+    </mat-form-field>
 
 
   </div>

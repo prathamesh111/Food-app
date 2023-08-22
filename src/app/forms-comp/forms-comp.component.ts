@@ -19,10 +19,11 @@ export class FormsCompComponent {
   }
 
   onSubmit(){
-    this.userData.email= this.codDetail.value.emailadd;
-    this.userData.password= this.codDetail.value.password;
-    this.userData.level = this.codDetail.value.level;
-    this.codDetail.reset()
+    console.log(this.userData);
+    // this.userData.email= this.codDetail.value.emailadd;
+    // this.userData.password= this.codDetail.value.password;
+    // this.userData.level = this.codDetail.value.level;
+    // this.codDetail.reset()
   }
 
 }

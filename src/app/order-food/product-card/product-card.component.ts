@@ -9,12 +9,13 @@ import { productsModel } from '../order-food.model';
 export class ProductCardComponent implements OnInit {
 
   pId: number;
+  
+  @Input() productItem : productsModel;
 
   ngOnInit(): void {
     this.pId =this.productItem.id;
   }
 
-  @Input() productItem : productsModel;
 
 
 }

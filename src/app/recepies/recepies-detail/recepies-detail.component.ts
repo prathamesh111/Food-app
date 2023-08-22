@@ -5,6 +5,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { IngredientModel } from 'src/app/shared/ingredientModel.model';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-recepies-detail',
@@ -30,9 +31,8 @@ export class RecepiesDetailComponent implements OnInit {
     });
   }
 
-  onModifyrecipe(){
-    // this.selectedModification= modifyRecipe.value;
-
+  onModifyrecipe(e:MatSelectChange){
+    this.selectedModification=e.value
     switch(this.selectedModification){
       case 'Add to shop List':
           this.recipeService.addRecipeToShopList(this.selectedRecipeItem.ingredients);
@@ -47,12 +47,14 @@ export class RecepiesDetailComponent implements OnInit {
         break;
       case 'Delete recipe':
         this.recipeService.onDeleteRecipe(this.recId);
-        this.router.navigate(['/']);
+        this.router.navigate(['../'], {relativeTo:this.route});
         break;
 
       default:
         break;
     }
+
+    e.value ="";
 
     
   }

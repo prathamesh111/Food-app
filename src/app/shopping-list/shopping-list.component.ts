@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { IngredientModel } from '../shared/ingredientModel.model';
 import { ShoppinglistService } from './shoppinglist.service';
-import { Subscription } from 'rxjs';
+import { Subscription, map, tap} from 'rxjs';
 import { AddIngredientPopupComponent } from '../shared/components/add-ingredient-popup/add-ingredient-popup.component';
 import { MatDialog } from '@angular/material/dialog';
 import {MatPaginator} from '@angular/material/paginator';
@@ -38,7 +38,8 @@ export class ShoppingListComponent implements OnInit ,OnDestroy , AfterViewInit{
   
   ngOnInit()  {
     this.slService.fetchIngredients().subscribe((res)=> {
-      this.dataSource = new MatTableDataSource(res);
+      let result = Object.values(res)
+      this.dataSource = new MatTableDataSource(result);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
